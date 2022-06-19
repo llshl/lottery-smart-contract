@@ -1,0 +1,110 @@
+{
+  "contractName": "Lottery",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/lsh/IdeaProjects/lottery-smart-contract/contracts/Lottery.sol\":\"Lottery\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/lsh/IdeaProjects/lottery-smart-contract/contracts/Lottery.sol\":{\"keccak256\":\"0x72572941e6c1994bc4ac143f69d45decc5c61f004b281976ea842146d5c2d668\",\"urls\":[\"bzz-raw://8478a69b722d3d339614bf3336440df0fdc2b91c170f5bc6f8f4529038adf433\",\"dweb:/ipfs/QmVa8czF1RgFAwZvYW2WJ9AnSjPypM5ELaWD1DTa6Dcfxc\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a72315820ccb087e8538db32b81ca778cecf26a90d086c13689f5e48dd66edff9c66f7ced64736f6c63430005100032",
+  "deployedBytecode": "0x6080604052600080fdfea265627a7a72315820ccb087e8538db32b81ca778cecf26a90d086c13689f5e48dd66edff9c66f7ced64736f6c63430005100032",
+  "sourceMap": "34:21:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;34:21:0;;;;;;;",
+  "deployedSourceMap": "34:21:0:-;;;;;",
+  "source": "pragma solidity >=0.4.21 <0.6.0;\n\ncontract Lottery {\n\n}\n",
+  "sourcePath": "/Users/lsh/IdeaProjects/lottery-smart-contract/contracts/Lottery.sol",
+  "ast": {
+    "absolutePath": "/Users/lsh/IdeaProjects/lottery-smart-contract/contracts/Lottery.sol",
+    "exportedSymbols": {
+      "Lottery": [
+        2
+      ]
+    },
+    "id": 3,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".21",
+          "<",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 2,
+        "linearizedBaseContracts": [
+          2
+        ],
+        "name": "Lottery",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 3,
+        "src": "34:21:0"
+      }
+    ],
+    "src": "0:56:0"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/lsh/IdeaProjects/lottery-smart-contract/contracts/Lottery.sol",
+    "exportedSymbols": {
+      "Lottery": [
+        2
+      ]
+    },
+    "id": 3,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".21",
+          "<",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 2,
+        "linearizedBaseContracts": [
+          2
+        ],
+        "name": "Lottery",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 3,
+        "src": "34:21:0"
+      }
+    ],
+    "src": "0:56:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.1.0",
+  "updatedAt": "2022-06-19T16:12:13.876Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
