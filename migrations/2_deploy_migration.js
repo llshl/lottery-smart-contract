@@ -1,4 +1,4 @@
-const Lottery = artifacts.require("Migrations"); // build 폴더안에있는 migrations 파일의 데이터를 가져옴
+const Lottery = artifacts.require("Lottery"); // build 폴더안에있는 migrations 파일의 데이터를 가져옴
 
 module.exports = function(deployer) {
   // deployer가 컨트랙을 배포한다
