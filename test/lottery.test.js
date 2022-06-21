@@ -18,4 +18,11 @@ contract('Lottery', ([deployer, user1, user2]) => { // 인자로 들어간 배�
         assert.equal(owner, '0xF76c9B7012c0A3870801eaAddB93B6352c8893DB')
         assert.equal(value ,5)
     })
+
+    // mocha에서 특정 테케만 실행시키려면 only 쓰면된다
+    it.only('getPot should return current pot', async () => {
+        console.log('Basic test')
+        let pot = await lottery.getPot();
+        assert.equal(pot ,0)
+    })
 })
