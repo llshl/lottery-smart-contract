@@ -4,7 +4,7 @@ contract Lottery {
   struct BetInfo {
     uint256 answerBlockNumber; // 맞출 블록의 넘버
     address payable bettor; // 돈을 건 사람 주소, 특정주소에 돈을 보내려면 payable을 써줘야함
-    bytes1 challenges; // 문제. ex) 0xab
+    bytes challenges; // 문제. ex) 0xab
   }
 
   // 매핑으로 큐를 구현하기 위한 변수
@@ -41,7 +41,7 @@ contract Lottery {
     @param challenges 유저가 베팅하는 글자
     @return 함수가 잘 수행되었는지 확인하는 bool 값
     */
-  function bet(bytes1 challenges) public payable returns (bool result) {
+  function bet(bytes challenges) public payable returns (bool result) {
     // 돈이 제대로 왔는지 확인
     // require는 if역할, msg.value는 컨트랙트가 받은금액, 문자열은 조건이 false때 출력할 문구
     require(msg.value == BET_AMOUNT, 'Not Enough ETH');
@@ -68,7 +68,7 @@ contract Lottery {
     returns (
       uint256 answerBlockNumber,
       address bettor,
-      bytes1 challenges
+      bytes challenges
     )
   {
     BetInfo memory b = _bets[index]; // memory형 변수는 함수가 끝나면 지워짐, storage형 변수는 블록에 영영 기록됨
@@ -78,7 +78,7 @@ contract Lottery {
   }
 
   // 큐 push
-  function pushBet(bytes1 challenges) internal returns (bool) {
+  function pushBet(bytes challenges) internal returns (bool) {
     BetInfo memory b; // 베팅정보를 하나 생성하고 세팅한다
     b.bettor = msg.sender; // 함수 호출한 사람
     b.answerBlockNumber = block.number + BET_BLOCK_INTERVAL; // block.number는 현재 이 트랜잭션이 들어가게되는 블록넘버를 가져온다
