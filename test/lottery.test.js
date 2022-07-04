@@ -72,4 +72,24 @@ contract("Lottery", ([deployer, user1, user2]) => {
       );
     });
   });
+
+  describe.only('isMatch', function () {
+    let blockHash = '0xab65ffa3380377e7694837e74373720e2af9964a9934394f4d717acc959fa8b4'
+    it('두개의 글자가 모두 일치하면 BettingResult.Win을 출력해야한다', async function () {
+      let matchingResult = await lottery.isMatch('0xab', blockHash);
+      assert.equal(matchingResult, 1)
+    });
+    it('하나의 글자가 일치하면 BettingResult.Draw을 출력해야한다', async function () {
+      let matchingResult = await lottery.isMatch('0xfb', blockHash);
+      assert.equal(matchingResult, 2)
+
+      matchingResult = await lottery.isMatch('0xae', blockHash);
+      assert.equal(matchingResult, 2)
+    });
+    it('두개의 글자가 모두 실패하면 BettingResult.Fail을 출력해야한다', async function () {
+      let matchingResult = await lottery.isMatch('0x12', blockHash);
+      assert.equal(matchingResult, 0)
+    });
+
+  })
 });
